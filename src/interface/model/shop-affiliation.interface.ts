@@ -1,8 +1,9 @@
-import { Types } from "mongoose";
+import { Document, Types } from "mongoose";
 import type { ShopAccountRole } from "../../type/shop-account-role.type.js";
 import type { ShopAffiliationStatus } from "../../type/shop-affiliation-status.type.js";
+import type { IBaseEntity } from "./base-entity.interface.js";
 
-export interface IShopAffiliation {
+export interface IShopAffiliation extends Document,IBaseEntity {
   shopId: Types.ObjectId;
   shopAccountId: Types.ObjectId;
 

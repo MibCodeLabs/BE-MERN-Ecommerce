@@ -1,7 +1,8 @@
-import { Types } from "mongoose";
+import { Document, Types } from "mongoose";
 import type { AccountStatus } from "../../type/account-status.type.js";
+import type { IBaseEntity } from "./base-entity.interface.js";
 
-export interface IShopAccount {
+export interface IShopAccount extends Document,IBaseEntity {
   email: string;
   password: string;
   contactNumber: string;

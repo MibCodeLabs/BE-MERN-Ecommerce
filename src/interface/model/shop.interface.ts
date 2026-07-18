@@ -1,7 +1,8 @@
 import { Document, Types } from "mongoose";
 import type { ShopStatus } from "../../type/shop-status.type.js";
+import type { IBaseEntity } from "./base-entity.interface.js";
 
-export interface IShop extends Document{
+export interface IShop extends Document,IBaseEntity{
   name: string;
   slug: string;
   description?: string;

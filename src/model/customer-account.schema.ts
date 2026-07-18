@@ -1,29 +1,7 @@
-import { model } from "mongoose";
-import type { IBaseEntity } from "../interface/model/base-entity.interface.js";
+import { Document, model } from "mongoose";
 import { createBaseSchema } from "./base.schema.js";
+import type { ICustomer } from "../interface/model/customer-account.interface.js";
 
-export interface ICustomer extends IBaseEntity {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone?: string;
-  password: string;
-
-  addresses?: {
-    title?: string;
-    street: string;
-    city: string;
-    state?: string;
-    country: string;
-    postalCode?: string;
-    isDefault?: boolean;
-  }[];
-
-  isActive: boolean;
-  isVerified: boolean;
-
-  lastLoginAt?: Date;
-}
 
 export const CustomerSchema = createBaseSchema<ICustomer>({
   firstName: {

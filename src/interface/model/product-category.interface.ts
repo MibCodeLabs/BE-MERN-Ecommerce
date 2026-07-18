@@ -1,6 +1,7 @@
-import { Types } from "mongoose";
+import { Document, Types } from "mongoose";
+import type { IBaseEntity } from "./base-entity.interface.js";
 
-export interface IProductCategory {
+export interface IProductCategory extends Document,IBaseEntity {
   name: string;
   parentId?: Types.ObjectId;
   shopId?: Types.ObjectId;

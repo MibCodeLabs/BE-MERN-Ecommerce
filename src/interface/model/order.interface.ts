@@ -1,10 +1,10 @@
-import { Types } from "mongoose";
-import type { IBaseEntity } from "./base-entity.interface.js";
+import { Document, Types } from "mongoose";
 import type { OrderStatus } from "../../type/order-status.type.js";
 import type { PaymentMethod } from "../../type/payment-method.type.js";
 import type { PaymentStatus } from "../../type/payment-status.type.js";
+import type { IBaseEntity } from "./base-entity.interface.js";
 
-export interface IOrder extends IBaseEntity {
+export interface IOrder extends Document,IBaseEntity {
   shopId: Types.ObjectId;
   customerId?: Types.ObjectId;
 

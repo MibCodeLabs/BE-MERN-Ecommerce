@@ -63,7 +63,7 @@ export const ProductSchema = createBaseSchema<IProduct>({
 
   lowStockThreshold: {
     type: Number,
-    default: 5,
+    default: 0,
     min: 0,
   },
 
