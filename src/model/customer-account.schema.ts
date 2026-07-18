@@ -1,3 +1,4 @@
+import { model } from "mongoose";
 import type { IBaseEntity } from "../interface/model/base-entity.interface.js";
 import { createBaseSchema } from "./base.schema.js";
 
@@ -107,3 +108,8 @@ export const CustomerSchema = createBaseSchema<ICustomer>({
     type: Date,
   },
 });
+
+export const Customer = model<ICustomer>(
+  "Customer",
+  CustomerSchema,
+);

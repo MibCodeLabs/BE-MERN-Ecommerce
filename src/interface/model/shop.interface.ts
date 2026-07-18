@@ -1,14 +1,14 @@
-import { Types } from "mongoose";
+import { Document, Types } from "mongoose";
 import type { ShopStatus } from "../../type/shop-status.type.js";
 
-export interface IShop {
+export interface IShop extends Document{
   name: string;
   slug: string;
   description?: string;
   email?: string;
   contactNumber?: string;
   address?: {
-    line1?: string;
+    add?: string;
     city?: string;
     state?: string;
     country?: string;

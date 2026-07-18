@@ -9,8 +9,8 @@ export interface ICrudService<
 > {
   getAll(filters?: FilterDTO): Promise<T[]>;
   getAllPaginated(filters: FilterDTO,pageRequest: IPageRequest): Promise<IPageResponse<T>>;
-  getOne(id: string): Promise<T | null>;
+  getOne(id: string): Promise<T>;
   create(data: CreateDTO): Promise<T>;
-  update(id: string, data: UpdateDTO): Promise<T | null>;
-  remove(id: string): Promise<T | null>;
+  update(id: string, data: UpdateDTO): Promise<T>;
+  remove(id: string): Promise<void>;
 }
