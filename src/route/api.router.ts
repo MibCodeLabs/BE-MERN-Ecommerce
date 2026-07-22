@@ -8,11 +8,12 @@ import { productRouter } from "./product.router.js";
 import { shopAccountRouter } from "./shop-account.router.js";
 import { shopAffiliationRouter } from "./shop-affiliation.router.js";
 import { shopRouter } from "./shop.router.js";
+import authRouter from "./auth.router.js";
 
 
 const router = Router();
 router.use('/',testRouter)
-router.use('/auth',testRouter)
+router.use('/auth',authRouter)
 router.use('/customer-account',customerAccountRouter)
 router.use('/internal-account',internalAccountRouter)
 router.use('/order',orderRouter)
